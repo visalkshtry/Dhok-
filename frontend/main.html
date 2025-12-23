@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deliver Nepal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG ICONS -->
+  <svg class="sr-only" aria-hidden="true" focusable="false">
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 22s7-5.4 7-12A7 7 0 0 0 5 10c0 6.6 7 12 7 12z" fill="currentColor"/>
+      <circle cx="12" cy="10" r="2.5" fill="#fff"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z" fill="currentColor"/>
+      <path d="M4 20a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-food" viewBox="0 0 24 24">
+      <path d="M4 10h16v2H4z" fill="currentColor"/>
+      <path d="M6 12c0 4 2.5 7 6 7s6-3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M8 8h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 13H7L6 8z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M9 8a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+      <path d="M6 6h15l-2 9H8L6 6z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+      <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+      <path d="M6 6L5 3H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M12 3l2.8 6.2 6.7.6-5 4.3 1.5 6.5L12 17.9 6 20.6l1.5-6.5-5-4.3 6.7-.6L12 3z"
+            fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- Top Bar -->
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <div class="brand" aria-label="Boudha, Nepal">
+        <span class="brand__icon" aria-hidden="true">
+          <svg class="icon icon--pin"><use href="#i-pin"></use></svg>
+        </span>
+        <span class="brand__name">Boudha, Nepal</span>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link is-active" href="#">Home</a>
+        <a class="nav__link" href="#">Orders</a>
+        <a class="nav__link" href="#">Favorites</a>
+        <a class="nav__link" href="#">Privacy</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="icon-btn" type="button" aria-label="Messages">
+          <svg class="icon"><use href="#i-mail"></use></svg>
+        </button>
+        <button class="pill-btn" type="button">Home</button>
+        <button class="icon-btn" type="button" aria-label="Profile">
+          <svg class="icon"><use href="#i-user"></use></svg>
+        </button>
+        <button class="status-dot" type="button" aria-label="Status: Online"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__left">
+        <h1>Local Food, Grocery &amp; Essentials – <br/>Free Delivery Nearby</h1>
+        <p>Order fresh food, groceries, and daily essentials delivered quickly to your door.</p>
+
+        <div class="hero__cta">
+          <button class="btn btn--primary" type="button" data-scroll="#stores">
+            <span class="btn__icon" aria-hidden="true">
+              <svg class="icon icon--white"><use href="#i-food"></use></svg>
+            </span>
+            Order Food
+          </button>
+
+          <button class="btn btn--secondary" type="button" data-scroll="#stores">
+            <span class="btn__icon" aria-hidden="true">
+              <svg class="icon icon--white"><use href="#i-bag"></use></svg>
+            </span>
+            Order Grocery
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__right" aria-hidden="true">
+        <!-- Lightweight illustration block -->
+        <div class="art">
+          <div class="art__sun"></div>
+          <div class="art__mountain"></div>
+          <div class="art__city"></div>
+          <div class="art__rider"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories + Search -->
+    <section class="section" aria-label="Browse categories">
+      <div class="section__header">
+        <h2 class="section__title">Nearby Stores</h2>
+
+        <label class="search" aria-label="Search stores">
+          <span class="search__label">Search:</span>
+          <input id="searchInput" class="search__input" type="search" placeholder="Search stores…" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="categories" role="tablist" aria-label="Store categories">
+        <button class="cat cat--food is-active" type="button" data-category="food" role="tab" aria-selected="true">
+          <svg class="icon icon--white"><use href="#i-food"></use></svg>
+          <div>
+            <div class="cat__name">Food</div>
+            <div class="cat__meta">Fast • ~ 20 min</div>
+          </div>
+        </button>
+
+        <button class="cat cat--grocery" type="button" data-category="grocery" role="tab" aria-selected="false">
+          <svg class="icon icon--white"><use href="#i-bag"></use></svg>
+          <div>
+            <div class="cat__name">Grocery</div>
+            <div class="cat__meta">~ 20–30 min</div>
+          </div>
+        </button>
+
+        <button class="cat cat--essentials" type="button" data-category="essentials" role="tab" aria-selected="false">
+          <svg class="icon icon--white"><use href="#i-cart"></use></svg>
+          <div>
+            <div class="cat__name">Essentials</div>
+            <div class="cat__meta">~ 15–25 min</div>
+          </div>
+        </button>
+
+        <button class="cat cat--pharmacy" type="button" data-category="pharmacy" role="tab" aria-selected="false">
+          <svg class="icon icon--white"><use href="#i-plus"></use></svg>
+          <div>
+            <div class="cat__name">Pharmacy</div>
+            <div class="cat__meta">~ 20 min</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Stores -->
+    <section id="stores" class="section" aria-label="Store list">
+      <h2 class="section__title">Nearby Stores</h2>
+      <div id="storeGrid" class="grid" aria-live="polite"></div>
+
+      <p id="emptyState" class="empty" hidden>
+        No stores found. Try a different search.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+
+      <div class="footer__right">
+        <span>© 2021 Deliver Nepal</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
