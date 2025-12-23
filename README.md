@@ -1,2 +1,2 @@
-# Dhok-
-local-delivery-app
+# Dhoka
+local delivery app
