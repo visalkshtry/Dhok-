@@ -1,2 +1,2 @@
-# Dhoka
+# Doka
 local delivery app
